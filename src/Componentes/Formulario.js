@@ -26,6 +26,7 @@ class Formulario extends Component {
             plan: plan
         }
 
+        //console.log(infoAuto);
         //enviarlo al componente principal
         this.props.cotizarSeguro(infoAuto);
 

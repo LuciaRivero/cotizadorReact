@@ -3,7 +3,7 @@ import Header from './Header';
 import Formulario from './Formulario';
 
 class App extends Component {
-  cotizarSeguros = (datos) => {
+  cotizarSeguro = (datos) => {
     console.log(datos);
   }
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
           titulo = 'Cotizador de seguro de auto'/>
         <div className="contenedor-formulario">
           <Formulario
-            cotizarSeguros={this.cotizarSeguros}/>
+            cotizarSeguro={this.cotizarSeguro}/>
         </div>
       </div>
     );
