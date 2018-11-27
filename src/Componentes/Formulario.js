@@ -31,8 +31,7 @@ class Formulario extends Component {
         this.props.cotizarSeguro(infoAuto);
 
         //reset el formulario (opcional)
-
-        e.currentTarget.reset()
+        //e.currentTarget.reset() //realiza el reset pero si luego no seleccionas una opcion toma la ultima y cotiza con la ultima ALTO BUUUG AMIGOOO!
     }
     render () {
         return (
