@@ -1,15 +1,28 @@
 import React, {Component} from 'react';
+import {primeraMayuscula} from '../Helper';
+import Resultado from './Resultado';
 
 class Resumen extends Component {
-    render() {
+    mostrarResumen = () => {
         const {marca,year,plan} = this.props.datos;
-        return(
+        if(!marca || !year || !plan) return null;
+        return (
             <div className="resumen">
                 <h2>Resumen</h2>
-                <li>Marca: {marca}</li>
-                <li>Plan: {plan}</li>
+                <li>Marca: {primeraMayuscula(marca)}</li>
+                <li>Plan: {primeraMayuscula(plan)}</li>
                 <li>año del auto: {year}</li>
+            </div>
+        )
+    }
 
+    render() {
+        
+        return(
+            <div>
+                {this.mostrarResumen()}
+                <Resultado
+                    resultado={this.props.resultado}/>
             </div>
         )
     }
